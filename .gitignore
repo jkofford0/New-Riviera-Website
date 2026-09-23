@@ -4,3 +4,7 @@ Videos/07-Bellafill Nonsurgical Brow Lift.mov
 # OS junk
 Thumbs.db
 .DS_Store
+
+# Local secrets (Square access token, etc.)
+.env
+server/.env
