@@ -163,7 +163,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
+  gap: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 .brand {
   display: flex;
@@ -187,7 +189,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -205,6 +207,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   border-color: var(--teal);
 }
 .nav-cta { display: flex; align-items: center; gap: 14px; }
+.nav-cta .btn { padding: 12px 20px; }
 .nav-toggle {
   display: none;
   background: none;
@@ -221,7 +224,11 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   transition: 0.2s;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
+  /* Phone number is still in the topbar */
+  .nav-cta .btn-outline { display: none; }
+}
+@media (max-width: 1024px) {
   .nav-links {
     position: absolute;
     top: 100%;
@@ -239,12 +246,14 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   .nav-links.open { display: flex; }
   .nav-links li { width: 100%; }
   .nav-links a { display: block; padding: 12px 0; border-bottom: 1px solid var(--border); }
-  .nav-cta .btn-outline { display: none; }
   .nav-toggle { display: block; }
 }
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   /* Not enough room next to the logo; Contact stays in the menu */
   .nav-cta .btn-primary { display: none; }
+}
+@media (max-width: 480px) {
+  .brand .brand-sub { font-size: 0.58rem; letter-spacing: 0.1em; }
 }
 
 /* ---------- Hero ---------- */
